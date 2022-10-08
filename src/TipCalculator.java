@@ -5,7 +5,7 @@ public class TipCalculator {
     private double totalBillBeforeTip;
 
     //Initializing variables//
-    public TipCalculator(int numPeople double tip) {
+    public TipCalculator(int numPeople, double tip) {
         this.numPeople = numPeople;
         this.tipPercentage =tip;
         totalBillBeforeTip = 0.0;
@@ -18,12 +18,11 @@ public class TipCalculator {
     public double getTipPercentage() {
         return tipPercentage;
     }
-
     public void addMeal(double cost) {
         totalBillBeforeTip += cost;
     }
     public double tipAmount() {
-        return totalBillBeforeTip * tipPercentage;
+        return (totalBillBeforeTip * tipPercentage) / 100.0;
     }
     public double totalBill() {
         return totalBillBeforeTip + tipAmount();
