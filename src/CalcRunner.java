@@ -33,10 +33,11 @@ public class CalcRunner {
         String formattedCost3 = formatter.format(tipPerPerson);
         double totalCostPP = calc.perPersonTotalCost();
         String formattedCost4 = formatter.format(totalCostPP);
+        String formattedTipPercent = formatter.format(calc.getTipPercentage());
 
         // This final part of the code are the messages stating the total price and the price each person must pay //
         System.out.println("Total bill before tip: " + formattedPrice);
-        System.out.println("Tip percentage: " + tip);
+        System.out.println("Tip percentage: " + formattedTipPercent);
         System.out.println("Total tip: " + formattedTip);
         System.out.println("Total bill: " + formattedCost);
         System.out.println("Per Person Cost before tip: " + formattedCost2);
